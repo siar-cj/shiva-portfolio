@@ -1,4 +1,4 @@
-name: Build and Deploy Next.js
+name: Deploy Next.js to GitHub Pages
 
 on:
   push:
@@ -11,15 +11,19 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 'lts/*'
@@ -27,21 +31,29 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build Next.js
+      - name: Build Next.js app
         run: npm run build
 
-      - name: Export static site
-        run: npx next export
+      - name: Verify output folder
+        run: |
+          echo "Checking output..."
+          ls -la
+          ls -la out
 
-      - name: Upload artifact
+      - name: Upload static files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out 
+          path: ./out
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
 
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - name: Deploy
+      - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
