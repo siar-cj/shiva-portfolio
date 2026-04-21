@@ -1,0 +1,149 @@
+.terminal {
+  margin: 0 48px 60px;
+  background: var(--card-bg);
+  border: 0.5px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-bottom: 0.5px solid #1a1a1a;
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.t1 { background: #ff5f57; }
+.t2 { background: #febc2e; }
+.t3 { background: #28c840; }
+
+.title {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.body {
+  padding: 20px 24px;
+  line-height: 2;
+}
+
+.commandGroup {
+  margin-bottom: 12px;
+}
+
+.inputLine {
+  display: flex;
+  gap: 8px;
+}
+
+.path { color: #60a5fa; }
+.cmd { color: var(--accent); }
+.symbol { color: var(--foreground); }
+
+.output {
+  margin-top: 4px;
+}
+
+.line {
+  white-space: pre;
+}
+
+.green { color: var(--accent); }
+.muted { color: #888; }
+
+.input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 0;
+  caret-color: transparent;
+  min-width: 1ch;
+}
+
+.cursor {
+  animation: pulse 1s infinite;
+  display: inline-block;
+  color: var(--accent);
+  margin-left: -4px;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .terminal {
+    margin: 0 24px 40px;
+    font-size: 11px;
+  }
+  .body {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .terminal {
+    margin: 0 16px 32px;
+    font-size: 10px;
+  }
+  .body {
+    padding: 12px;
+  }
+  .input {
+    font-size: 10px;
+  }
+  .title {
+    display: none;
+  }
+}
+
+.welcome {
+  margin-bottom: 24px;
+}
+
+.suggestions {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.suggestionLabel {
+  font-size: 11px;
+  color: #555;
+  font-family: var(--font-mono);
+}
+
+.suggestionBtn {
+  background: #111;
+  border: 0.5px solid #222;
+  color: #888;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.suggestionBtn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(74, 222, 128, 0.05);
+}

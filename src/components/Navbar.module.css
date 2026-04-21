@@ -1,0 +1,101 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 48px;
+  border-bottom: 0.5px solid var(--border);
+  background: var(--background);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--foreground);
+  letter-spacing: -0.5px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.desktopLinks {
+  display: flex;
+  gap: 28px;
+}
+
+.desktopLinks a {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  letter-spacing: 0.5px;
+}
+
+.desktopLinks a:hover {
+  color: var(--foreground);
+}
+
+.mobileToggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.mobileToggle span {
+  width: 20px;
+  height: 2px;
+  background: var(--foreground);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(10, 10, 10, 0.98);
+  backdrop-filter: blur(10px);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-bottom: 0.5px solid var(--border);
+  z-index: 100;
+}
+
+.mobileMenu a {
+  font-size: 16px;
+  color: var(--foreground);
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 16px 24px;
+  }
+  .desktopLinks {
+    display: none;
+  }
+  .mobileToggle {
+    display: flex;
+  }
+}

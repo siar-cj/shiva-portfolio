@@ -1,0 +1,145 @@
+.main {
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.hero {
+  padding: 80px 48px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.backBtn {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent);
+  margin-bottom: 32px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.backBtn:hover {
+  opacity: 1;
+}
+
+.title {
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--foreground);
+  letter-spacing: -2px;
+  margin-bottom: 12px;
+}
+
+.title span {
+  color: var(--accent);
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--text-muted);
+  max-width: 700px;
+}
+
+.content {
+  padding: 0 48px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.categorySection {
+  margin-bottom: 40px;
+  break-inside: avoid;
+  display: inline-block;
+  width: 100%;
+}
+
+.categoryTitle {
+  font-size: 14px;
+  font-family: var(--font-mono);
+  color: var(--accent);
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.categoryTitle::after {
+  content: '';
+  flex: 1;
+  height: 0.5px;
+  background: var(--border);
+  opacity: 0.5;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--card-bg);
+  border: 0.5px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  transition: all 0.2s;
+}
+
+.card:hover {
+  border-color: var(--border-hover);
+  background: rgba(74, 222, 128, 0.03);
+  transform: translateY(-2px);
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.tag {
+  font-size: 9px;
+  font-family: var(--font-mono);
+  color: #555;
+  margin-top: 1px;
+}
+
+@media (min-width: 1024px) {
+  .content {
+    column-count: 2;
+    column-gap: 32px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .content {
+    column-count: 3;
+    column-gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 24px 32px;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .content {
+    padding: 0 24px 60px;
+    column-count: 1;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

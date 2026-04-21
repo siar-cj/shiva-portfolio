@@ -1,0 +1,123 @@
+{
+  "personal": {
+    "name": "siva",
+    "domain": "cs",
+    "fullName": "Siva Chandrasekhar Javvadi",
+    "role": "Cloud & DevOps Engineer",
+    "tagline": "Building reliable pipelines, scalable infrastructure, and automated workflows. Turning complexity into clean, reproducible systems.",
+    "status": "open to opportunities",
+    "resumeUrl": "#",
+    "social": {
+      "github": "https://github.com/siar-cj",
+      "linkedin": "#",
+      "email": "mailto:Sivajavvadhi.cs3@gmail.com",
+      "phone": "9863394403"
+    }
+  },
+  "metrics": [
+    { "value": "99.5%", "label": "uptime maintained" },
+    { "value": "~40%", "label": "deploy time reduced" },
+    { "value": "100%", "label": "containerized" },
+    { "value": "~60%", "label": "infra cost optimized" },
+    { "value": "<5min", "label": "avg pipeline run time" },
+    { "value": "100%", "label": "SLA Compliance" }
+  ],
+  "skills": [
+    { "name": "Linux/Unix", "icon": "🐧", "sub": "OS", "isFeatured": true },
+    { "name": "AWS", "icon": "☁", "sub": "Cloud", "isFeatured": true },
+    { "name": "Azure", "icon": "🔷", "sub": "Cloud", "isFeatured": true },
+    { "name": "Kubernetes", "icon": "⛵", "sub": "Orchestration", "isFeatured": true },
+    { "name": "Docker", "icon": "🐳", "sub": "Containers", "isFeatured": true },
+    { "name": "Terraform", "icon": "📦", "sub": "IaC", "isFeatured": true },
+    { "name": "GitHub Actions", "icon": "⚙", "sub": "CI/CD", "isFeatured": true },
+    { "name": "Jenkins", "icon": "🔧", "sub": "Automation", "isFeatured": true },
+    { "name": "ArgoCD", "icon": "🐙", "sub": "CD", "isFeatured": true },
+    { "name": "Prometheus", "icon": "📊", "sub": "Monitoring", "isFeatured": false },
+    { "name": "Grafana", "icon": "🔍", "sub": "Observability", "isFeatured": false },
+    { "name": "Git", "icon": "🍴", "sub": "VCS", "isFeatured": false },
+    { "name": "Ansible", "icon": "📜", "sub": "Automation", "isFeatured": false },
+    { "name": "SonarQube", "icon": "🔍", "sub": "Quality", "isFeatured": false },
+    { "name": "Nginx", "icon": "🌐", "sub": "Proxy", "isFeatured": false },
+    { "name": "Kafka", "icon": "🚇", "sub": "Messaging", "isFeatured": false },
+    { "name": "MySQL", "icon": "🐬", "sub": "Database", "isFeatured": false },
+    { "name": "Nexus", "icon": "📦", "sub": "Artifacts", "isFeatured": false },
+    { "name": "Windows OS", "icon": "🪟", "sub": "OS", "isFeatured": false },
+    { "name": "Synk", "icon": "🛡️", "sub": "Security", "isFeatured": false },
+    { "name": "Maven", "icon": "📦", "sub": "Build", "isFeatured": false },
+    { "name": "MacOS", "icon": "🍎", "sub": "OS", "isFeatured": false },
+    { "name": "GitLab", "icon": "🦊", "sub": "VCS/CI", "isFeatured": false },
+    { "name": "AuroraDB", "icon": "💎", "sub": "Cloud DB", "isFeatured": false }
+  ],
+  "projects": [
+    {
+      "title": "Deployment – Dolphin HR",
+      "description": "Built a centralized HR portal handling employee onboarding, leave management, payroll tracking, and org hierarchy. Deployed on internal infra with role-based access control and audit logging.",
+      "tag": "deployment",
+      "stack": ["Internal Infra", "RBAC", "Audit Logging"],
+      "isFeatured": true
+    },
+    {
+      "title": "Deployment – HT Pickles",
+      "description": "End-to-end estore for artisanal pickle brand — product catalog, cart, order management, and payment integration. Deployment design with fast load times for tier-2/3 and rural users too.",
+      "tag": "e-commerce",
+      "stack": ["E-store", "Payment Integration", "Optimized Load"],
+      "isFeatured": false
+    },
+    {
+      "title": "Deployment – CareerVedha",
+      "description": "Developed an education platform featuring course enrollment, video content delivery, progress tracking, and certificate generation. Optimized for low-latency content access across regions.",
+      "tag": "education",
+      "stack": ["LMS", "Video Delivery", "Low Latency"],
+      "isFeatured": false
+    },
+    {
+      "title": "Deployment – MH Marbles",
+      "description": "Built a business showcase site with product catalog, sample request flow, and integrated inquiry system. Focused on visual-heavy layout for tiles and interior design display.",
+      "tag": "showcase",
+      "stack": ["Catalog", "Inquiry System", "Visual Optimization"],
+      "isFeatured": false
+    }
+  ],
+  "experience": [
+    {
+      "role": "Cloud DevOps Engineer",
+      "company": "Quinzex",
+      "period": "August 2025 – Current"
+    },
+    {
+      "role": "AWS DevOps Engineer",
+      "company": "Reigns Info",
+      "period": "Dec 2024 – Nov 2025"
+    },
+    {
+      "role": "AWS DevOps Engineer",
+      "company": "Rackera Inc",
+      "period": "Aug 2023 – Nov 2024"
+    }
+  ],
+  "terminal": {
+    "user": "siva",
+    "hostname": "ip-10-0-62-6.ec2.internal",
+    "commands": [
+      {
+        "input": "kubectl get pods -n prod",
+        "output": [
+          { "text": "NAME                READY   STATUS    RESTARTS   AGE", "color": "muted" },
+          { "text": "dolphin-hr-api      ", "color": "muted" },
+          { "text": "1/1", "color": "green" },
+          { "text": "     Running   0          12d", "color": "muted" },
+          { "text": "career-vedha-web    ", "color": "muted" },
+          { "text": "1/1", "color": "green" },
+          { "text": "     Running   0          4d", "color": "muted" }
+        ]
+      },
+      {
+        "input": "terraform plan -out=tfplan",
+        "output": [
+          { "text": "Plan: 5 to add, 0 to change, 0 to destroy.", "color": "green" },
+          { "text": "Saved plan to: tfplan", "color": "muted" }
+        ]
+      }
+    ]
+  }
+}

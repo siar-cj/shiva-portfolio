@@ -1,0 +1,44 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.terminal {
+  width: 80%;
+  max-width: 600px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+
+.line {
+  color: var(--accent);
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.cursor {
+  display: inline-block;
+  color: var(--accent);
+  animation: flicker 0.1s infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .terminal {
+    width: 90%;
+    font-size: 12px;
+  }
+}

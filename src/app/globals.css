@@ -1,0 +1,65 @@
+:root {
+  --background: #000000;
+  --foreground: #f0f0f0;
+  --accent: #4ade80;
+  --accent-muted: rgba(74, 222, 128, 0.1);
+  --border: #1e1e1e;
+  --border-hover: #333333;
+  --card-bg: #0a0a0a;
+  --text-muted: #666666;
+  --text-dim: #444444;
+  --font-space: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-space);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
